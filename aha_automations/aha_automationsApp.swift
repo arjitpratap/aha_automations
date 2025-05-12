@@ -11,7 +11,9 @@ import SwiftUI
 struct aha_automationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                SplashScreen()
+            }
         }
     }
 }

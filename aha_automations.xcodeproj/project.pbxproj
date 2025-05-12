@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4274142E9BA39E990F681935 /* Pods_aha_automations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4504C6A2AE90304493DAC7AD /* Pods_aha_automations.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4504C6A2AE90304493DAC7AD /* Pods_aha_automations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aha_automations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FDA767F5FB598BB7EE44B50 /* Pods-aha_automations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aha_automations.debug.xcconfig"; path = "Target Support Files/Pods-aha_automations/Pods-aha_automations.debug.xcconfig"; sourceTree = "<group>"; };
 		B79F2A272DD245DF00DFC4E0 /* aha_automations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aha_automations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF932584B042C99387744BD7 /* Pods-aha_automations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aha_automations.release.xcconfig"; path = "Target Support Files/Pods-aha_automations/Pods-aha_automations.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,17 +30,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4274142E9BA39E990F681935 /* Pods_aha_automations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75FA84017603966DDADFCA5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA767F5FB598BB7EE44B50 /* Pods-aha_automations.debug.xcconfig */,
+				CF932584B042C99387744BD7 /* Pods-aha_automations.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B79F2A1E2DD245DF00DFC4E0 = {
 			isa = PBXGroup;
 			children = (
 				B79F2A292DD245DF00DFC4E0 /* aha_automations */,
 				B79F2A282DD245DF00DFC4E0 /* Products */,
+				75FA84017603966DDADFCA5C /* Pods */,
+				BB044A52F9E40A572ABFD4AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +64,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BB044A52F9E40A572ABFD4AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4504C6A2AE90304493DAC7AD /* Pods_aha_automations.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B79F2A322DD245E200DFC4E0 /* Build configuration list for PBXNativeTarget "aha_automations" */;
 			buildPhases = (
+				063523D485CB725814DD588D /* [CP] Check Pods Manifest.lock */,
 				B79F2A232DD245DF00DFC4E0 /* Sources */,
 				B79F2A242DD245DF00DFC4E0 /* Frameworks */,
 				B79F2A252DD245DF00DFC4E0 /* Resources */,
@@ -64,8 +92,6 @@
 				B79F2A292DD245DF00DFC4E0 /* aha_automations */,
 			);
 			name = aha_automations;
-			packageProductDependencies = (
-			);
 			productName = aha_automations;
 			productReference = B79F2A272DD245DF00DFC4E0 /* aha_automations.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		063523D485CB725814DD588D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aha_automations-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B79F2A232DD245DF00DFC4E0 /* Sources */ = {
@@ -248,6 +299,7 @@
 		};
 		B79F2A332DD245E200DFC4E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FDA767F5FB598BB7EE44B50 /* Pods-aha_automations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -276,6 +328,7 @@
 		};
 		B79F2A342DD245E200DFC4E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF932584B042C99387744BD7 /* Pods-aha_automations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
