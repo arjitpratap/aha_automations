@@ -35,7 +35,7 @@ struct SplashScreen: View {
                 }
                 
                 
-                NavigationLink(destination: LoginScreen()) {
+                NavigationLink(destination: LoginView()) {
                     Text("Log In")
                         .font(.system(size: 18, weight: .medium))
                         .frame(maxWidth: .infinity)
